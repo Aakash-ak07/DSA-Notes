@@ -1,0 +1,39 @@
+class Node 
+{
+    Node next;
+    int val;
+
+    Node(int val) 
+    {
+        this.val = val;
+        next = null;
+    }
+}
+
+//1.  Add a node at the front...
+
+public static Node addElement(Node head, int k) {
+    
+    Node add = new Node(k);
+    add.next = head;
+    head = add; 
+
+    return head;
+}
+
+
+2. Add a node after a given node.
+
+public void insertAfter(Node head, int data)
+{
+    if (head == null) 
+    {
+        return;
+    }
+    Node new_node = new Node(data);
+ 
+    new_node.next = head.next;
+ 
+    head.next = new_node;
+}
+
